@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Rovix — AI Automation Agents</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <nav class="wrap">
+    <div class="logo" id="logoHome">
+      <span class="logo-mark"></span> Rovix
+    </div>
+    <div class="search-box">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+      <input type="text" id="searchInput" placeholder="Search agents…" />
+    </div>
+    <a class="nav-cta" href="https://wa.me/971528036012" target="_blank" rel="noopener">Book a demo</a>
+  </nav>
+</header>
+
+<main id="mainView" class="main-view">
+
+  <section class="hero">
+    <div class="wrap">
+      <div>
+        <div class="eyebrow"><span class="dot"></span> Now supporting multi-step workflows</div>
+        <h1>AI automation<br><span class="accent">agents</span> that run your busywork.</h1>
+        <p class="lead">Rovix builds ready-to-deploy AI agents that handle outreach, support, data entry and reporting — so your team can focus on the work that actually needs a human.</p>
+        <div class="hero-actions">
+          <button class="btn-primary" onclick="document.getElementById('products').scrollIntoView({behavior:'smooth'})">Browse agents</button>
+          <button class="btn-ghost">See how it works</button>
+        </div>
+      </div>
+
+      <div class="flow">
+        <svg viewBox="0 0 340 320">
+          <path class="flow-line-active" d="M60 60 L170 60"/>
+          <path class="flow-line" d="M170 60 L170 150"/>
+          <path class="flow-line-active" d="M170 150 L280 150"/>
+          <path class="flow-line" d="M170 150 L60 220"/>
+          <path class="flow-line-active" d="M170 150 L280 240"/>
+
+          <rect class="node node-active" x="20" y="38" width="80" height="44" rx="10"/>
+          <text class="node-label-strong" x="34" y="64">Trigger</text>
+
+          <rect class="node" x="130" y="128" width="80" height="44" rx="10"/>
+          <text class="node-label-strong" x="148" y="154">Agent</text>
+
+          <rect class="node node-active" x="240" y="128" width="80" height="44" rx="10"/>
+          <text class="node-label-strong" x="253" y="154">Decide</text>
+
+          <rect class="node" x="20" y="198" width="80" height="44" rx="10"/>
+          <text class="node-label" x="35" y="224">Log data</text>
+
+          <rect class="node node-active" x="240" y="218" width="80" height="44" rx="10"/>
+          <text class="node-label" x="250" y="244">Notify team</text>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <section class="stats">
+    <div class="wrap">
+      <div class="stat"><b>40+</b><span>ready-made agents</span></div>
+      <div class="stat"><b>120k</b><span>tasks automated / month</span></div>
+      <div class="stat"><b>6 min</b><span>average setup time</span></div>
+      <div class="stat"><b>99.2%</b><span>task accuracy</span></div>
+    </div>
+  </section>
+
+  <section class="section" id="products">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <h2>Pick an agent, plug it in</h2>
+          <p>Every agent is built for one job and does it well. Click any card to see exactly what it does.</p>
+        </div>
+      </div>
+      <div class="grid" id="productGrid"></div>
+    </div>
+  </section>
+
+</main>
+
+<div id="detailView" class="detail">
+  <div class="wrap">
+    <a class="back-link" id="backLink" href="#">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+      Back to all agents
+    </a>
+    <div id="detailContent"></div>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap">
+    <div class="logo"><span class="logo-mark"></span> Rovix</div>
+    <p>© 2026 Rovix. Built for teams who'd rather automate than repeat.</p>
+  </div>
+</footer>
+
+<!-- data.js must load before app.js — it defines PRODUCTS -->
+<script src="data.js"></script>
+<script src="app.js"></script>
+
+</body>
+</html>
